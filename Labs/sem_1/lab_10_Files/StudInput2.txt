@@ -1,0 +1,16 @@
+<class '__main__.Stud'>
+family:Иванов
+height:192
+weight:75
+<class '__main__.Stud'>
+family:Jhonson
+height:192
+weight:75
+<class '__main__.Stud'>
+family:Mayer
+height:183
+weight:69
+<class '__main__.Stud'>
+family:Simpson
+height:200
+weight:110

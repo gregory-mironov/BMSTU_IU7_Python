@@ -1,0 +1,6 @@
+Ivanov Ivan Designer 10000 Yandex
+Petrov Petr Programmer 20000 Google
+Petrov Andrey Musician 13000 MetFan
+Seregin Sergey Ingeneer 15000 Gazprom
+Mishin Michail Driver 12000 Taxi
+Ivan Ivanov Driver 14000 Taxi
