@@ -16,16 +16,17 @@ def shell_sort_hibbart_1963(array):
         insertion_sort(array, step)
         step //= 2
 
-def shell_sort_pratt_1971(array):
-    max_step = (len(array) + 2) // 3 + 1
-    steps = [1]
-    k = 0
-    while steps[k] < max_step:
-        steps.append(steps[k] * 3)
-        k += 1
+def shell_sort_stasevich_1965(array):
+    max_step = len(array)
+    step = 1
+    while step < max_step:
+        step <<= 1
 
-    for k in range(len(steps) - 1, -1, -1):
-        insertion_sort(array, steps[k])
+    step = (step >> 1) + 1
+
+    while step > 0:
+        insertion_sort(array, step)
+        step //= 2
 
 def shell_sort_knuth_1973(array):
     max_step = (len(array) + 2) // 3 + 1
@@ -104,3 +105,35 @@ def insertion_sort(array, gap):
             array[j] = array[j - gap]
             j -= gap
         array[j] = val
+
+def shell_sort_5_11(array):
+    step = (len(array) + 1) // 2 + 1
+    steps = []
+    while step >= 1:
+        steps.append(step)
+        step = 1 if step == 2 else step * 5 // 11
+
+    for step in steps:
+        insertion_sort(array, step)
+
+def shell_sort_3_pow(array):
+    max_step = (len(array) + 2) // 3 + 1
+    steps = []
+    step = 1
+    while step < max_step:
+        steps.append(step)
+        step *= 3
+
+    for k in range(len(steps) - 1, -1, -1):
+        insertion_sort(array, steps[k])
+
+def shell_sort_5_pow(array):
+    max_step = (len(array) + 4) // 5 + 1
+    steps = []
+    step = 1
+    while step < max_step:
+        steps.append(step)
+        step *= 5
+
+    for k in range(len(steps) - 1, -1, -1):
+        insertion_sort(array, steps[k])

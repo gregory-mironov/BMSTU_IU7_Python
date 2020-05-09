@@ -57,12 +57,15 @@ def main():
         methods = [
             ("Shell sort", shell_sort),\
             ("Shell sort (Hibbard 1963)", shell_sort_hibbart_1963),\
-            ("Shell sort (Pratt 1971)", shell_sort_pratt_1971),\
+            ("Shell sort (Stasevich 1965)", shell_sort_stasevich_1965),\
             ("Shell sort (Knuth 1973)", shell_sort_knuth_1973),\
             ("Shell sort (Sedgwick 1982)", shell_sort_sedgwick_1982),\
             ("Shell sort (Sedgwick 1986)", shell_sort_sedgwick_1986),\
             ("Shell sort (Fibonacci)", shell_sort_fib),\
             ("Shell sort (Tokuda 1992)", shell_sort_tokuda_1992),\
+            ("Shell sort (5/11)", shell_sort_5_11),\
+            ("Shell sort (3 pow)", shell_sort_3_pow),\
+            ("Shell sort (5 pow)", shell_sort_5_pow),\
             ]
         
         arrays = [\
@@ -128,15 +131,18 @@ def main():
         methods = [
             ("Shell sort", shell_sort),\
             ("Shell sort (Hibbard 1963)", shell_sort_hibbart_1963),\
-            ("Shell sort (Pratt 1971)", shell_sort_pratt_1971),\
+            ("Shell sort (Stasevich 1965)", shell_sort_stasevich_1965),\
             ("Shell sort (Knuth 1973)", shell_sort_knuth_1973),\
             ("Shell sort (Sedgwick 1982)", shell_sort_sedgwick_1982),\
             ("Shell sort (Sedgwick 1986)", shell_sort_sedgwick_1986),\
             ("Shell sort (Fibonacci)", shell_sort_fib),\
             ("Shell sort (Tokuda 1992)", shell_sort_tokuda_1992),\
+            ("Shell sort (5/11)", shell_sort_5_11),\
+            ("Shell sort (3 pow)", shell_sort_3_pow),\
+            ("Shell sort (5 pow)", shell_sort_5_pow),\
             ]
         
-        x_gr = np.arange(0, 10001, 500)
+        x_gr = np.arange(0, 20001, 200)
         y_gr = [[] for i in range(len(methods))]
         for i in x_gr:
             array = get_reversed_sorted_arr(i)
